@@ -1,0 +1,33 @@
+
+.mat-add-cv {
+
+  color: white;
+
+}
+
+.mat-toolbar {
+  background-color: #287bff;
+  color: white;
+}
+
+::ng-deep.mat-dialog-container {
+  width: 100px;
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+
+
+.input {
+  margin-right: 20px;
+}
+
+.mat-dialog-container {
+  margin: 20px;
+  width: 100px;
+}

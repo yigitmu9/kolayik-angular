@@ -1,0 +1,79 @@
+<mat-grid-list cols="2" rowHeight="1:1">
+  <mat-grid-tile colspan="1" rowspan="1">
+
+      <h2>CV</h2>
+
+  </mat-grid-tile>
+  <mat-grid-tile class="dialog">
+    <form  [formGroup]="profileForm" (ngSubmit)="onClick(cv)" class="dialog">
+    <table>
+      <tr>
+        <h1>CV Gönder</h1>
+      </tr>
+      <tr>
+        <mat-form-field appearance="fill">
+          <mat-label>Kullanıcı</mat-label>
+          <mat-select id="user"  formControlName="user">
+            <mat-option value="user">Kullanıcı</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="fill">
+          <mat-label>Karar</mat-label>
+          <mat-select id="decision"  formControlName="decision">
+            <mat-option value="Onay">Onay</mat-option>
+            <mat-option value="Ret">Ret</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </tr>
+      <tr>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Notlar</mat-label>
+        <textarea matInput id="notes" type="text" formControlName="notes"></textarea>
+      </mat-form-field>
+      </tr>
+      <tr>
+        <button mat-button mat-dialog-close>Vazgeç</button>
+        <button mat-button mat-dialog-close type="submit">Gönder</button>
+      </tr>
+    </table>
+      </form>
+
+  </mat-grid-tile>
+</mat-grid-list>
+
+
+
+<style>
+  mat-grid-tile {
+    background: #f4f7fa;
+  }
+
+  mat-grid-tile div {
+
+    width: 100%;
+    text-align: center;
+  }
+
+  table {
+    width: 90%;
+  }
+
+  .btn {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .dialog {
+
+
+    text-align: center;
+    align-items: center;
+    align-content: center;
+
+  }
+
+
+
+</style>

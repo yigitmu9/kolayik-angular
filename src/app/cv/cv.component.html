@@ -1,0 +1,33 @@
+
+
+<div class="example-button-container" >
+  <mat-toolbar color="toolbar">
+    <mat-toolbar-row>
+      <h1>CV'ler</h1>
+      <span class="example-spacer"></span>
+      <button class="btn" (click)="openDialog()" mat-icon-button color="add-cv" >
+        <mat-icon>add</mat-icon>
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+<mat-tab-group>
+  <mat-tab label="Yeniler" >
+
+    <app-cv-cards
+      *ngFor="let cv of Cvs" [cv]="cv">
+
+    </app-cv-cards>
+
+
+
+
+  </mat-tab>
+  <mat-tab label="Onay Bekleyen"> Content 2 </mat-tab>
+  <mat-tab  label="Olumsuz"> Content 3 </mat-tab>
+  <mat-tab label="Planlanmış"> Content 4 </mat-tab>
+  <mat-tab label="Onaylanmış"> Content 5 </mat-tab>
+
+</mat-tab-group>
+
+
